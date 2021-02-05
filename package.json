@@ -1,0 +1,14 @@
+{
+  "name": "autopilot",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.18.3"
+  },
+  "description": "Rewritten and correctly organised Autopilot bot for Discord (Official Final Code)",
+  "main": "main.js",
+  "author": "Aircraft Overviewer#2597",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
