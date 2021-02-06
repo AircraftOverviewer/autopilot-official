@@ -49,7 +49,7 @@ module.exports = {
       const helpEmbed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
         .setTitle('**Commands**')
-        .setDescription('Hi there! This is a project from **Aircraft Overviewer#2597** to bring fun to you all in an entertaining and administrative bot. Please feel free to search any commands you do not know with "!help [command]. My prefix is "**!**" and my commands are as follows:');
+        .setDescription('Hi there! This is a project from **Aircraft Overviewer#2597** to bring fun to you all in an entertaining and administrative bot. Please feel free to search any commands you do not know with "!help [command]". My prefix is "**!**" and my commands are as follows:');
 
       for (const command of client.commands) {
         helpEmbed.addField(`**${command[1].name}**`, command[1].description, true);
