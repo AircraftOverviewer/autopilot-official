@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = '!!';
+const prefix = '!';
 
 const fs = require('fs');
 
@@ -28,7 +28,7 @@ client.once('ready', () => {
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-  const args = message.content.slice(2).trim().split(/ +/);
+  const args = message.content.slice(1).trim().split(/ +/);
   const command = args.shift().toLowerCase();
 
   const file = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
