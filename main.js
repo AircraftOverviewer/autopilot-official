@@ -31,7 +31,7 @@ client.on('message', message => {
   const args = message.content.slice(1).trim().split(/ +/);
   const command = args.shift().toLowerCase();
 
-  const file = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command));
+  const file = client.commands.get(command) || client.commands.find(cmd => cmd.shortcut && cmd.aliases.includes(command));
 
   if (!file) return;
 
