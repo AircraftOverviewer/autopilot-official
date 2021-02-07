@@ -1,7 +1,7 @@
 module.exports = {
   name: 'coinflip',
   description: 'Flips a coin. 50/50 for Heads & Tails',
-  aliases: ['coin', 'flip', 'cf'],
+  shortcut: ['coin', 'flip', 'cf'],
   usage: '!coinflip',
   execute (Discord, message, args, client) {
     const responses = [

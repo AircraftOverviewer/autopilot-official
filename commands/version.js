@@ -1,6 +1,6 @@
 module.exports = {
   name: 'version',
-  aliases: ['update'],
+  shortcut: ['update'],
   description: 'See the latest patch nots about the latest release of the bot',
   usage: '!version',
   execute (Discord, message, args, client) {

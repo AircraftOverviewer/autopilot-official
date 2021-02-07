@@ -1,6 +1,6 @@
 module.exports = {
   name: 'purge',
-  aliases: ['clear'],
+  shortcut: ['clear'],
   description: '(admin only) Bulk-delete messages, up to 100 at a time',
   usage: '!purge <number>',
   parameters: {

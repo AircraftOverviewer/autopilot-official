@@ -1,6 +1,6 @@
 module.exports = {
   name: '8-ball',
-  aliases: ['8', '8-b', '8ball'],
+  shortcut: ['8', '8-b', '8ball'],
   description: 'Shakes a magic 8-ball. 50% chance good reading, 25% chance bad, 25% chance neutral',
   usage: '!8-ball [question]',
   parameters: {

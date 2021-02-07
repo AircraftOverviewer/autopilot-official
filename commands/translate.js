@@ -1,6 +1,6 @@
 module.exports = {
   name: 'translate',
-  aliases: ['t', 'tl'],
+  shortcut: ['t', 'tl'],
   description: 'Translate anything from another language into English',
   usage: '!translate [message]',
   parameters: {

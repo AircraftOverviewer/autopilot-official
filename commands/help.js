@@ -1,6 +1,6 @@
 module.exports = {
   name: 'help',
-  aliases: ['commands'],
+  shortcut: ['commands'],
   description: 'Find information on different commands or get a list of commands to use',
   usage: '!help [command]',
   parameters: {
@@ -8,7 +8,7 @@ module.exports = {
   },
   execute (Discord, message, args, client) {
     if (args[0]) {
-      const file = client.commands.get(args[0]) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(args[0]));
+      const file = client.commands.get(args[0]) || client.commands.find(cmd => cmd.shortcut && cmd.shortcut.includes(args[0]));
 
       if (!file) {
         message.channel.send('Invalid command');
@@ -32,12 +32,12 @@ module.exports = {
           helpEmbed.addField('**Usage**', `\`\`\`${usage}\`\`\``);
         }
 
-        if (file.aliases) {
-          const { aliases } = file;
-          if (aliases.length === 1) {
-            helpEmbed.addField('**Alias**', aliases[0]);
+        if (file.shortcut) {
+          const { shortcut } = file;
+          if (shortcut.length === 1) {
+            helpEmbed.addField('**Shortcut**', shortcut[0]);
           } else {
-            helpEmbed.addField('**Aliases**', aliases.join(', '));
+            helpEmbed.addField('**Shortcuts**', shortcut.join(', '));
           }
         }
 
