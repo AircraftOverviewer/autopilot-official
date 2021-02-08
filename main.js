@@ -40,4 +40,4 @@ client.on('message', message => {
 
 client.login(process.env.token);
 
-// Use "(config.token)" when debugging offline & add "const config = require('./config.json')". Use "(process.env.token)" when pushing to Heroku
+// Use "(config.token)" when debugging offline & add "const config = require ('./config.json')". Use "(process.env.token)" when pushing to Heroku

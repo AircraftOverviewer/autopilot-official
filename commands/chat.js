@@ -1,6 +1,6 @@
 module.exports = {
   name: 'chat',
-  shortcut: ['talk', 'speak', 'c'],
+  shortcut: ['talk', 'speak'],
   description: 'Talk to a basic and funny chat AI, and have it respond to you',
   usage: '!chat [message]',
   parameters: {

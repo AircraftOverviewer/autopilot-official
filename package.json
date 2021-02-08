@@ -13,7 +13,6 @@
     "cleverbot-free": "^1.0.5",
     "discord.js": "^12.5.1",
     "iso-639-1": "^2.1.7",
-    "puppeteer": "^7.0.1",
     "random": "^2.2.0",
     "semistandard": "^16.0.0",
     "translate-platforms": "0.0.7"

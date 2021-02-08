@@ -10,9 +10,9 @@ module.exports = {
     ];
     const response = responses[Math.floor(Math.random() * responses.length)];
     message.channel.send('<a:CoinFlip:792678734813200414> **Flipping a Coin...**')
-      .then(message => {
+      .then(msg => {
         setTimeout(function () {
-          message.delete();
+          msg.delete();
           message.channel.send(response);
         }, 1500);
       });
