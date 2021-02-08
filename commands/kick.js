@@ -14,8 +14,7 @@ module.exports = {
       .setDescription('<:error:784747315960479754> You cannot kick someone with administrative permissions');
     const kickedEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setDescription(`${tag} has ejected ${taggedUser} into the stratosphere`)
-      .setImage('https://media1.tenor.com/images/ca1bad80a757fa8b87dacd9c051f2670/tenor.gif?itemid=11029651');
+      .setDescription(`${tag} has kicked the user ${taggedUser} from the server`);
     const unknownEmbed = new Discord.MessageEmbed()
       .setColor('#ff0000')
       .setDescription('<:error:784747315960479754> You did not specify who to kick');

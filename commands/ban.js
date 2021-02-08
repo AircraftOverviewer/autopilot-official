@@ -14,8 +14,7 @@ module.exports = {
       .setDescription('<:error:784747315960479754> You cannot ban someone with administrative permissions');
     const bannedEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setDescription(`${tag} has ejected ${taggedUser} into the stratosphere and burnt their birthday invitation back`)
-      .setImage('https://media1.tenor.com/images/ae83976e867ebc2722054a632ff045ad/tenor.gif?itemid=11035060');
+      .setDescription(`${tag} has banned the user ${taggedUser} from the server`);
     const unknownEmbed = new Discord.MessageEmbed()
       .setColor('#ff0000')
       .setDescription('<:error:784747315960479754> You did not specify who to ban');
