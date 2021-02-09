@@ -8,7 +8,7 @@ module.exports = {
     const { member } = message;
 
     message.channel.startTyping();
-    const result = await speedtest();
+    const result = await speedtest({ acceptLicense: true, acceptGdpr: true });
     const downloadValue = result.download.bandwidth / 125000;
     const uploadValue = result.upload.bandwidth / 125000;
     const testEmbed = new Discord.MessageEmbed()
