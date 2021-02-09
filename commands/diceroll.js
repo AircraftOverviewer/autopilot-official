@@ -14,38 +14,31 @@ module.exports = {
     if (args[0] > 5) {
       message.channel.send(fiveEmbed);
     } else {
-      (async () => {
-        const _message = await message.channel.send('**Rolling...**');
-        setTimeout(function () {
-          const outcomes = {
-            1: '<:Dice1:793040525577289730> One',
-            2: '<:Dice2:793040511451529237> Two',
-            3: '<:Dice3:793040499245580289> Three',
-            4: '<:Dice4:793040485118902282> Four',
-            5: '<:Dice5:793040469269413888> Five',
-            6: '<:Dice6:793040439812554802> Six'
-          };
+      const outcomes = {
+        1: '<:Dice1:793040525577289730> One',
+        2: '<:Dice2:793040511451529237> Two',
+        3: '<:Dice3:793040499245580289> Three',
+        4: '<:Dice4:793040485118902282> Four',
+        5: '<:Dice5:793040469269413888> Five',
+        6: '<:Dice6:793040439812554802> Six'
+      };
 
-          _message.delete();
+      let dice = 1;
+      if (parseInt(args[0])) dice = parseInt(args[0]);
 
-          let dice = 1;
-          if (parseInt(args[0])) dice = parseInt(args[0]);
+      let result = '';
 
-          let result = '';
+      for (let i = 0; i < dice; i++) {
+        result += `${outcomes[random.int(1, 6)]}\n`;
+      }
 
-          for (let i = 0; i < dice; i++) {
-            result += `${outcomes[random.int(1, 6)]}\n`;
-          }
-
-          message.channel.send(result)
-            .catch(function () {
-              const errorEmbed = new Discord.MessageEmbed()
-                .setColor('#ff0000')
-                .setDescription('<:error:784747315960479754> There was an error rolling the dice');
-              message.channel.send(errorEmbed);
-            });
-        }, 1500);
-      })();
+      message.channel.send(result)
+        .catch(function () {
+          const errorEmbed = new Discord.MessageEmbed()
+            .setColor('#ff0000')
+            .setDescription('<:error:784747315960479754> There was an error rolling the dice');
+          message.channel.send(errorEmbed);
+        });
     }
   }
 };

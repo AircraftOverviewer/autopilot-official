@@ -6,8 +6,8 @@ module.exports = {
   execute (Discord, message, args, client) {
     const versionEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setTitle('Current Version - v2.1.1')
-      .setDescription('```\n+ Massive overhaul of the help command. Now is dynamic and individually changes depending on the command\n+ Complete recoding of the Autopilot bot. Bot should now run much smoother and have less bug issues\n+ Added "invite" command. Sends a bot invite URL (check "!help invite" for more)```');
+      .setTitle('Current Version - v2.2.0')
+      .setDescription('```\n+ Added \'speedtest\' command. Use to check your ping, downoad and upload speeds. Use \'!help speedtest\' for more information\n+ Minor bug fixes```');
     message.channel.send(versionEmbed);
   }
 };

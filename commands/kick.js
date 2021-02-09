@@ -23,7 +23,7 @@ module.exports = {
       .setColor('#ff0000')
       .setDescription('<:error:784747315960479754> You must respond with either **Y** or **N**');
     const timeEmbed = new Discord.MessageEmbed()
-      .setColor(message.guild.me.displayHexColor)
+      .setColor('#ff0000')
       .setDescription('<:error:784747315960479754> You must respond within 10 seconds. Operation cancelled');
     const cancelledEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)

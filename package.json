@@ -15,6 +15,7 @@
     "iso-639-1": "^2.1.7",
     "random": "^2.2.0",
     "semistandard": "^16.0.0",
+    "speedtest-net": "^2.1.1",
     "translate-platforms": "0.0.7"
   }
 }
