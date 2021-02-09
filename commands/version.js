@@ -7,7 +7,7 @@ module.exports = {
     const versionEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Current Version - v2.2.0')
-      .setDescription('```\n+ Added \'speedtest\' command. Use to check your ping, downoad and upload speeds. Use \'!help speedtest\' for more information\n+ Minor bug fixes```');
+      .setDescription('```\n+ Added \'speedtest\' command. Use to check the bot\'s ping, downoad and upload speeds. Use \'!help speedtest\' for more information\n+ Minor bug fixes```');
     message.channel.send(versionEmbed);
   }
 };
