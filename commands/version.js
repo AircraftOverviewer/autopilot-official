@@ -6,8 +6,8 @@ module.exports = {
   execute (Discord, message, args, client) {
     const versionEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setTitle('Current Version - v2.2.1')
-      .setDescription('```\n+ Added \'insult\' command. Allows users to have the bot insukt another user. See \'!help insult\' for more information```');
+      .setTitle('Current Version - v2.2.0')
+      .setDescription('```\n+ Added \'speedtest\' command. Use to check the bot\'s ping, downoad and upload speeds. Use \'!help speedtest\' for more information\n+ Minor bug fixes```');
     message.channel.send(versionEmbed);
   }
 };
