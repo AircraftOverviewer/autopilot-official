@@ -9,7 +9,14 @@ module.exports = {
     const insulter = require('insult');
     const taggedUser = message.mentions.users.first();
     if (args[0]) {
-      message.channel.send(`${taggedUser} ${insulter.Insult()}`);
+      if (!taggedUser) {
+        const userEmbed = new Discord.MessageEmbed()
+          .setColor('#ff0000')
+          .setDescription('<:error:784747315960479754> That user was not found');
+        message.channel.send(userEmbed);
+      } else {
+        message.channel.send(`${taggedUser} ${insulter.Insult()}`);
+      }
     } else {
       const tagEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
