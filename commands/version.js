@@ -1,7 +1,7 @@
 module.exports = {
   name: 'version',
   shortcut: ['update'],
-  description: 'See the latest patch nots about the latest release of the bot',
+  description: 'See the latest patch notes about the latest release of the bot',
   usage: '!version',
   execute (Discord, message, args, client) {
     const versionEmbed = new Discord.MessageEmbed()
