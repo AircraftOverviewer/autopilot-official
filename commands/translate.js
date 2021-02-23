@@ -25,6 +25,13 @@ module.exports = {
         }
       }
       const result = await microsoft(input, { to: 'en' });
+      if (result.lang.from === 'en') {
+        const englishEmbed = new Discord.MessageEmbed()
+          .setColor('#ff0000')
+          .setDescription('<:error:784747315960479754> This message is already in English');
+        message.channel.send(englishEmbed);
+        return;
+      }
       if (result.text !== result.text.slice(0, 1020)) result.text = result.text.slice(0, 1020) + '...';
       try {
         message.channel.send(`**Message translated to English from ${ISO6391.getName(result.lang.from)}**\n"${result.text}"`);
