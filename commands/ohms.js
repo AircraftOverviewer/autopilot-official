@@ -1,5 +1,6 @@
 module.exports = {
   name: 'ohms',
+  shortcut: ['Ω'],
   description: 'Calculate Voltage, Current & Resistance using Ohms Law (V=IR)',
   usage: '!force [values](<V> <I> <R>)',
   parameters: {

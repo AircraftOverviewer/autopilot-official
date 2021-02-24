@@ -1,5 +1,6 @@
 module.exports = {
   name: 'force',
+  shortcut: ['f'],
   description: 'Calculate force acting on an object using Newton\'s Second Law of Motion using the Basic Equation of Mition (F=ma)',
   usage: '!force [values](<F> <m> <a>)',
   parameters: {

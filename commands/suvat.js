@@ -1,5 +1,6 @@
 module.exports = {
   name: 'suvat',
+  shortcut: ['kinetic, motion'],
   description: 'Calculate motion in a given direction when acceleration is constant using a minimum of 3 known values from the Kinetic Equation (SUVAT) to find the remaining unknowns',
   usage: '!suvat [values](<S> <U> <V> <A> <T>)',
   parameters: {
