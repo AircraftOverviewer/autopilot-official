@@ -4,9 +4,9 @@ module.exports = {
   usage: '!force [values](<V> <I> <R>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
-    2: { name: '<F>', description: '- Measurement for Force. Units in Volts (V)' },
-    3: { name: '<M>', description: '- Measurement for Mass. Units in Amperes (A)' },
-    4: { name: '<A>', description: '- Measurement for Acceleration. Units in Ohms (Ω)' }
+    2: { name: '<V>', description: '- Measurement for Voltage. Units in Volts (V)' },
+    3: { name: '<I>', description: '- Measurement for Current. Units in Amperes (A)' },
+    4: { name: '<R>', description: '- Measurement for Resistance. Units in Ohms (Ω)' }
   },
   execute (Discord, message, args, client) {
     const Ohms = {};
