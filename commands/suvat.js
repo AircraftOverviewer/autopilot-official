@@ -5,9 +5,9 @@ module.exports = {
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
     2: { name: '<S>', description: '- Measurement for Displacement. Units in Metres (m)' },
-    3: { name: '<U>', description: '- Measurement for Initial Velocity. Units in Metres per Second (m/s^-1)' },
-    4: { name: '<V>', description: '- Measurement for Final Velocity. Units in Metres per Second (m/s^-1)' },
-    5: { name: '<A>', description: '- Measurement for Acceleration. Units in Metres per Second (m/s^-2)' },
+    3: { name: '<U>', description: '- Measurement for Initial Velocity. Units in Metres per Second (m/s)' },
+    4: { name: '<V>', description: '- Measurement for Final Velocity. Units in Metres per Second (m/s)' },
+    5: { name: '<A>', description: '- Measurement for Acceleration. Units in Metres per Second (m/s/s)' },
     6: { name: '<T>', description: '- Measurement for Time. Units in Seconds (s)' }
   },
   execute (Discord, message, args, client) {
@@ -121,7 +121,7 @@ module.exports = {
     } else {
       const valuesEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
-        .setDescription('You must include a minimum of 3 known values');
+        .setDescription('<:error:784747315960479754> You must include a minimum of 3 known values');
       return message.channel.send(valuesEmbed);
     }
     const suvatEmbed = new Discord.MessageEmbed()
