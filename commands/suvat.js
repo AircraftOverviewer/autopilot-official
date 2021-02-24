@@ -5,9 +5,9 @@ module.exports = {
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
     2: { name: '<S>', description: '- Measurement for Displacement. Units in Metres (m)' },
-    3: { name: '<U>', description: '- Measurement for Initial Velocity. Units in Metres per Second (m/s)' },
-    4: { name: '<V>', description: '- Measurement for Final Velocity. Units in Metres per Second (m/s)' },
-    5: { name: '<A>', description: '- Measurement for Acceleration. Units in Metres per Second (m/s/s)' },
+    3: { name: '<U>', description: '- Measurement for Initial Velocity. Units in Metres per Second (m.s⁻¹)' },
+    4: { name: '<V>', description: '- Measurement for Final Velocity. Units in Metres per Second (m.s⁻¹)' },
+    5: { name: '<A>', description: '- Measurement for Acceleration. Units in Metres per Second (m.s⁻²)' },
     6: { name: '<T>', description: '- Measurement for Time. Units in Seconds (s)' }
   },
   execute (Discord, message, args, client) {
@@ -129,9 +129,9 @@ module.exports = {
       .setTitle('SUVAT Calculation - Results')
       .setDescription(`
       **Displacement (S)**\n${S} m
-      \n**Initial Velocity (U)**\n${U} m/s
-      \n**Final Velocity (V)**\n${V} m/s
-      \n**Acceleration (A)**\n${A} m/s/s
+      \n**Initial Velocity (U)**\n${U} m.s⁻¹
+      \n**Final Velocity (V)**\n${V} m.s⁻¹
+      \n**Acceleration (A)**\n${A} m.s⁻²
       \n**Time (T)**\n${T} s
       `);
     message.channel.send(suvatEmbed);

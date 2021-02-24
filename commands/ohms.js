@@ -1,25 +1,25 @@
 module.exports = {
-  name: 'force',
-  description: 'Calculate force acting on an object using Newton\'s Second Law of Motion using the Basic Equation of Mition (F=ma)',
-  usage: '!force [values](<F> <m> <a>)',
+  name: 'ohms',
+  description: 'Calculate Voltage, Current & Resistance using Ohms Law (V=IR)',
+  usage: '!force [values](<V> <I> <R>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
-    2: { name: '<F>', description: '- Measurement for Force. Units in Newtons (N)' },
-    3: { name: '<M>', description: '- Measurement for Mass. Units in Kilograms (kg)' },
-    4: { name: '<A>', description: '- Measurement for Acceleration. Units in Metres per Second (m.s⁻²)' }
+    2: { name: '<F>', description: '- Measurement for Force. Units in Volts (V)' },
+    3: { name: '<M>', description: '- Measurement for Mass. Units in Amperes (A)' },
+    4: { name: '<A>', description: '- Measurement for Acceleration. Units in Ohms (Ω)' }
   },
   execute (Discord, message, args, client) {
-    const Forces = {};
+    const Ohms = {};
 
-    Forces.F = parseFloat(args[0]);
-    Forces.M = parseFloat(args[1]);
-    Forces.A = parseFloat(args[2]);
+    Ohms.V = parseFloat(args[0]);
+    Ohms.I = parseFloat(args[1]);
+    Ohms.R = parseFloat(args[2]);
 
     let i = 0;
 
     if (i === 3 || !args[0]) {
       const help = require('./help.js');
-      help.execute(Discord, message, ['force'], client);
+      help.execute(Discord, message, ['ohms'], client);
       return;
     }
 
@@ -31,11 +31,11 @@ module.exports = {
       return;
     }
 
-    for (const Force in Forces) {
-      if (isNaN(Forces[Force])) i++;
+    for (const Ohm in Ohms) {
+      if (isNaN(Ohms[Ohm])) i++;
     }
 
-    let { F, M, A } = Forces;
+    let { V, I, R } = Ohms;
 
     if (i === 0) {
       const fiveEmbed = new Discord.MessageEmbed()
@@ -45,9 +45,9 @@ module.exports = {
       return;
     }
     if (i === 1) {
-      if (isNaN(F)) F = `${F = M * A}`;
-      if (isNaN(M)) M = `${M = F / A}`;
-      if (isNaN(A)) A = `${A = F / M}`;
+      if (isNaN(V)) V = `${V = I * R}`;
+      if (isNaN(I)) I = `${I = V / R}`;
+      if (isNaN(R)) R = `${R = V / I}`;
     } else {
       const valuesEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
@@ -56,11 +56,11 @@ module.exports = {
     }
     const suvatEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
-      .setTitle('Force Calculation - Results')
+      .setTitle('Ohms Calculation - Results')
       .setDescription(`
-    **Force (F)**\n${F} N
-    \n**Mass (M)**\n${M} kg
-    \n**Acceleration (A)**\n${A} m.s⁻²
+    **Voltage (V)**\n${V} V
+    \n**Current (I)**\n${I} A
+    \n**Resistence (R)**\n${R} Ω
     `);
     message.channel.send(suvatEmbed);
   }
