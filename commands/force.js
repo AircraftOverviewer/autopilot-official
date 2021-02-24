@@ -2,7 +2,7 @@ module.exports = {
   name: 'force',
   shortcut: ['f'],
   description: 'Calculate force acting on an object using Newton\'s Second Law of Motion using the Basic Equation of Mition (F=ma)',
-  usage: '!force [values](<F> <m> <a>)',
+  usage: '!force [values](<F> <M> <A>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
     2: { name: '<F>', description: '- Measurement for Force. Units in Newtons (N)' },
