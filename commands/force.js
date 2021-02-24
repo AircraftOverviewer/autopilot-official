@@ -57,11 +57,11 @@ module.exports = {
     const suvatEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Force Calculation - Results')
-      .setDescription(`
-    **Force (F)**\n${F} N
-    \n**Mass (M)**\n${M} kg
-    \n**Acceleration (A)**\n${A} m.s⁻²
-    `);
+      .addFields(
+        { name: 'Force (F)', value: `${F} N` },
+        { name: 'Mass (M)', value: `${M} kg` },
+        { name: 'Acceleration (A)', value: `${A} m.s⁻²` }
+      );
     message.channel.send(suvatEmbed);
   }
 };

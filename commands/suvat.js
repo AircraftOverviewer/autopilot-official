@@ -127,13 +127,13 @@ module.exports = {
     const suvatEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle('SUVAT Calculation - Results')
-      .setDescription(`
-      **Displacement (S)**\n${S} m
-      \n**Initial Velocity (U)**\n${U} m.s⁻¹
-      \n**Final Velocity (V)**\n${V} m.s⁻¹
-      \n**Acceleration (A)**\n${A} m.s⁻²
-      \n**Time (T)**\n${T} s
-      `);
+      .addFields(
+        { name: 'Displacement (S)', value: `${S} m` },
+        { name: 'Initial Velocity', value: `${U} m.s⁻¹` },
+        { name: 'Final Velocity', value: `${V} m.s⁻¹` },
+        { name: 'Acceleration', value: `${A} m.s⁻²` },
+        { name: 'Time (S)', value: `${T} s` }
+      );
     message.channel.send(suvatEmbed);
   }
 };

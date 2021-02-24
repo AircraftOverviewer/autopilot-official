@@ -57,11 +57,11 @@ module.exports = {
     const suvatEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Ohms Calculation - Results')
-      .setDescription(`
-    **Voltage (V)**\n${V} V
-    \n**Current (I)**\n${I} A
-    \n**Resistence (R)**\n${R} Ω
-    `);
+      .addFields(
+        { name: 'Voltage (V)', value: `${V} V` },
+        { name: 'Current (I)', value: `${I} A` },
+        { name: 'Resistance (R)', value: `${R} Ω` }
+      );
     message.channel.send(suvatEmbed);
   }
 };
