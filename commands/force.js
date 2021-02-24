@@ -1,7 +1,7 @@
 module.exports = {
   name: 'force',
   shortcut: ['f'],
-  description: 'Calculate force acting on an object using Newton\'s Second Law of Motion using the Basic Equation of Mition (F=ma)',
+  description: 'Calculate force acting on an object using Newton\'s Second Law of Motion using the Basic Equation of Motion (F=ma) to 2 decimal places',
   usage: '!force [values](<F> <M> <A>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
@@ -59,9 +59,9 @@ module.exports = {
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Force Calculation - Results')
       .addFields(
-        { name: 'Force (F)', value: `${F} N` },
-        { name: 'Mass (M)', value: `${M} kg` },
-        { name: 'Acceleration (A)', value: `${A} m.s⁻²` }
+        { name: 'Force (F)', value: `${parseFloat(F).toFixed(2)} N` },
+        { name: 'Mass (M)', value: `${parseFloat(M).toFixed(2)} kg` },
+        { name: 'Acceleration (A)', value: `${parseFloat(A).toFixed(2)} m.s⁻²` }
       );
     message.channel.send(suvatEmbed);
   }

@@ -1,7 +1,7 @@
 module.exports = {
   name: 'suvat',
   shortcut: ['kinetic, motion'],
-  description: 'Calculate motion in a given direction when acceleration is constant using a minimum of 3 known values from the Kinetic Equation (SUVAT) to find the remaining unknowns',
+  description: 'Calculate motion in a given direction when acceleration is constant using a minimum of 3 known values from the Kinetic Equation (SUVAT) to find the remaining unknowns to 2 decimal places',
   usage: '!suvat [values](<S> <U> <V> <A> <T>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
@@ -129,11 +129,11 @@ module.exports = {
       .setColor(message.guild.me.displayHexColor)
       .setTitle('SUVAT Calculation - Results')
       .addFields(
-        { name: 'Displacement (S)', value: `${S} m` },
-        { name: 'Initial Velocity', value: `${U} m.s⁻¹` },
-        { name: 'Final Velocity', value: `${V} m.s⁻¹` },
-        { name: 'Acceleration', value: `${A} m.s⁻²` },
-        { name: 'Time (S)', value: `${T} s` }
+        { name: 'Displacement (S)', value: `${parseFloat(S).toFixed(2)} m` },
+        { name: 'Initial Velocity', value: `${parseFloat(U).toFixed(2)} m.s⁻¹` },
+        { name: 'Final Velocity', value: `${parseFloat(V).toFixed(2)} m.s⁻¹` },
+        { name: 'Acceleration', value: `${parseFloat(A).toFixed(2)} m.s⁻²` },
+        { name: 'Time (S)', value: `${parseFloat(T).toFixed(2)} s` }
       );
     message.channel.send(suvatEmbed);
   }

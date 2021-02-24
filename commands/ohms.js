@@ -1,7 +1,7 @@
 module.exports = {
   name: 'ohms',
   shortcut: ['Ω'],
-  description: 'Calculate Voltage, Current & Resistance using Ohms Law (V=IR)',
+  description: 'Calculate Voltage, Current & Resistance using Ohms Law (V=IR) to 2 decimal places',
   usage: '!force [values](<V> <I> <R>)',
   parameters: {
     1: { name: '[values]', description: '- Values must be numbers for known variables and must have \'-\' if unknown with spacing in between values' },
@@ -59,9 +59,9 @@ module.exports = {
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Ohms Calculation - Results')
       .addFields(
-        { name: 'Voltage (V)', value: `${V} V` },
-        { name: 'Current (I)', value: `${I} A` },
-        { name: 'Resistance (R)', value: `${R} Ω` }
+        { name: 'Voltage (V)', value: `${parseFloat(V).toFixed(2)} V` },
+        { name: 'Current (I)', value: `${parseFloat(I).toFixed(2)} A` },
+        { name: 'Resistance (R)', value: `${parseFloat(R).toFixed(2)} Ω` }
       );
     message.channel.send(suvatEmbed);
   }
