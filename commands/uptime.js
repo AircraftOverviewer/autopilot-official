@@ -37,6 +37,6 @@ module.exports = {
       uptime = `${displayDays}, ${displayHours}, ${displayMinutes} and ${displaySeconds}`;
     }
 
-    message.channel.send(`Bot last updated ${uptime} ago`);
+    message.channel.send(`Bot last offline ${uptime} ago`);
   }
 };

@@ -14,14 +14,8 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
-const connectingTimestamp = new Date().getTime();
-
-console.log('Connecting...');
-
 client.once('ready', () => {
-  const connectedTimestamp = new Date().getTime();
-  const connectingTime = connectedTimestamp - connectingTimestamp;
-  console.log('Autopilot connected in ' + connectingTime + ' ms');
+  console.log(`${client.user.username} Connected! :D`);
   client.user.setActivity('!help - Enjoy!', { type: 'LISTENING' });
 });
 
