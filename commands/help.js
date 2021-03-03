@@ -11,7 +11,8 @@ module.exports = {
       const file = client.commands.get(args[0]) || client.commands.find(cmd => cmd.shortcut && cmd.shortcut.includes(args[0]));
 
       if (!file) {
-        message.channel.send('Invalid command');
+        const help = require('./help.js');
+        help.execute(Discord, message, [''], client);
       } else {
         const { name, description, usage } = file;
 
