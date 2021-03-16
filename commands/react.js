@@ -14,7 +14,7 @@ module.exports = {
       return;
     }
 
-    const emoji = client.emojis.cache.filter(e => e.name.toLowerCase() === args[0].toLowerCase()).first();
+    const emoji = guild.emojis.cache.filter(e => e.name.toLowerCase() === args[0].toLowerCase()).first();
 
     if (!emoji) {
       const nullEmbed = new Discord.MessageEmbed()
@@ -37,6 +37,6 @@ module.exports = {
     }
 
     await message.delete();
-    _result.react(emoji);
+    _result.emojis.first();
   }
 };
