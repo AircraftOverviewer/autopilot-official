@@ -6,9 +6,15 @@ module.exports = {
     1: { name: '[emoji_name]', description: '- The full name of the emoji you wish to send. Does not need to be case-sensitive' }
   },
   execute (Discord, message, args, client) {
-    const emojis = guild.emojis.cache.filter(e => e.name.toLowerCase() === args.join(' ').toLowerCase());
-    
-    message.channel.send(emojis.first())
+    const emojis = client.emojis.cache.filter(e => e.name.toLowerCase() === args.join(' ').toLowerCase());
+
+    let content = '';
+
+    emojis.forEach(emoji => {
+      content = `${content} ${emoji}`;
+    });
+
+    message.channel.send(content)
       .then(function () {
         message.delete();
       })
