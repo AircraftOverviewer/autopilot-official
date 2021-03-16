@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const client = new Discord.Client();
 
-const prefix = '!';
+const prefix = 'ap ';
 
 const fs = require('fs');
 
@@ -16,24 +16,13 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
   console.log(`${client.user.username} Connected! :D`);
-  client.user.setActivity('!help - Enjoy!', { type: 'LISTENING' });
+  client.user.setActivity('ap help - Enjoy!', { type: 'LISTENING' });
 });
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-  if (!message.guild.me.hasPermission('ADMINISTRATOR')) {
-    if (message.guild.me.hasPermission('SEND_MESSAGES')) {
-      const adminEmbed = new Discord.MessageEmbed()
-        .setColor('#ff0000')
-        .setDescription('<:error:784747315960479754> This bot requires administrator permissions to have full functionality. Please add this permission or contact an admin to fix this issue');
-      message.channel.send(adminEmbed);
-      return;
-    } else {
-      return;
-    }
-  }
 
-  const args = message.content.slice(1).trim().split(/ +/);
+  const args = message.content.slice(3).trim().split(/ +/);
   const command = args.shift().toLowerCase();
 
   const file = client.commands.get(command) || client.commands.find(cmd => cmd.shortcut && cmd.shortcut.includes(command));

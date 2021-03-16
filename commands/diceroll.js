@@ -1,6 +1,6 @@
 module.exports = {
   name: 'diceroll',
-  description: 'Roll a standard die/dice. 16.66% chance for each number',
+  description: 'Roll up to 5 standard die. 16.66% chance for each number',
   shortcut: ['dice', 'roll', 'dr'],
   usage: '!diceroll <number>',
   parameters: {
