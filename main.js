@@ -25,8 +25,8 @@ client.on('message', message => {
     if (message.guild.me.hasPermission('SEND_MESSAGES')) {
       const adminEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
-        .setDescription('<:error:784747315960479754> This bot requires the administrator permission to have full functionality. Please grant this permission or contact an admin to fix this')
-      message.channel.send(adminEmbed)
+        .setDescription('<:error:784747315960479754> This bot requires the administrator permission to have full functionality. Please grant this permission or contact an admin to fix this');
+      message.channel.send(adminEmbed);
       return;
     } else {
       return;
