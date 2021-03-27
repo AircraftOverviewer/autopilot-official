@@ -1,7 +1,7 @@
 module.exports = {
   name: 'mute',
   description: '(admin only) Add the "Muted" role to a user',
-  usage: '!mute [user]',
+  usage: 'ap mute [user]',
   parameters: {
     1: { name: '[user]', description: '- Tag the user you wish to mute. Cannot be a server moderator. You must have a muted role called "Muted" and it must be above your general permission role' }
   },

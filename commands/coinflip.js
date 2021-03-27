@@ -2,7 +2,7 @@ module.exports = {
   name: 'coinflip',
   description: 'Flips a coin. 50/50 for Heads & Tails',
   shortcut: ['coin', 'flip', 'cf'],
-  usage: '!coinflip',
+  usage: 'ap coinflip',
   execute (Discord, message, args, client) {
     const responses = [
       '**<:Coin:792679862481059890> Heads**',

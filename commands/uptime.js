@@ -1,7 +1,7 @@
 module.exports = {
   name: 'uptime',
   description: 'Checks to see when the bot was last reset/rebooted',
-  usage: '!uptime',
+  usage: 'ap uptime',
   execute (Discord, message, args, client) {
     let totalSeconds = client.uptime / 1000;
     const days = Math.floor(totalSeconds / 86400);

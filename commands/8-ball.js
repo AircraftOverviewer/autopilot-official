@@ -2,7 +2,7 @@ module.exports = {
   name: '8-ball',
   shortcut: ['8', '8-b', '8ball'],
   description: 'Shakes a magic 8-ball. 50% chance good reading, 25% chance bad, 25% chance neutral',
-  usage: '!8-ball [question]',
+  usage: 'ap 8-ball [question]',
   parameters: {
     1: { name: '[question]', description: '- Insert the question you wish to ask the Magic 8-Ball' }
   },

@@ -2,7 +2,7 @@ module.exports = {
   name: 'diceroll',
   description: 'Roll up to 5 standard die. 16.66% chance for each number',
   shortcut: ['dice', 'roll', 'dr'],
-  usage: '!diceroll <number>',
+  usage: 'ap diceroll <number>',
   parameters: {
     1: { name: '<number>', description: '- Choose the number of die you wish to roll, 5 maximum' }
   },

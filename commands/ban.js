@@ -1,7 +1,7 @@
 module.exports = {
   name: 'ban',
   description: '(admin only) Permenantly ban a user from the server',
-  usage: '!ban [user]',
+  usage: 'ap ban [user]',
   parameters: {
     1: { name: '[user]', description: '- Tag the user you wish to ban. Cannot be a server moderator' }
   },

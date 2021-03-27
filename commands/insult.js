@@ -1,7 +1,7 @@
 module.exports = {
   name: 'insult',
   description: 'Have the bot insult a user of your choice',
-  usage: '!insult [user]',
+  usage: 'ap insult [user]',
   parameters: {
     1: { name: '[user]', description: '- Enter the tag of the user you want to insult' }
   },

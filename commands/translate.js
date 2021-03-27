@@ -2,7 +2,7 @@ module.exports = {
   name: 'translate',
   shortcut: ['t', 'tl'],
   description: 'Translate anything from another language into English',
-  usage: '!translate [message]',
+  usage: 'ap translate [message]',
   parameters: {
     1: { name: '[message]', description: '- (Optional) Write/paste in a message for the bot to translate. If left blank, the bot will grab the latest message in the channel and translate it' }
   },

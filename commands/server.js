@@ -1,7 +1,7 @@
 module.exports = {
   name: 'server',
   description: 'Check the name and number of members in a given server',
-  usage: '!server',
+  usage: 'ap server',
   execute (Discord, message, args, client) {
     const serverEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)

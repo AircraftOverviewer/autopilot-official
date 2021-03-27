@@ -1,7 +1,7 @@
 module.exports = {
   name: 'react',
   description: 'React to the latest message in a channel with any emoji in this server, including animated emojis',
-  usage: '!react [emoji_name]',
+  usage: 'ap react [emoji_name]',
   parameters: {
     1: { name: '[emoji_name]', description: '- The full name of the emoji you wish to react with. Does not need to be case-sensitive' }
   },

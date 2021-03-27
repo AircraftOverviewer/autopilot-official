@@ -2,7 +2,7 @@ module.exports = {
   name: 'help',
   shortcut: ['commands'],
   description: 'Find information on different commands or get a list of commands to use',
-  usage: '!help [command]',
+  usage: 'ap help [command]',
   parameters: {
     1: { name: '[command]', description: '- (Optional) Insert desired command to see information for it. If left blank, a command list will be sent' }
   },
@@ -50,7 +50,7 @@ module.exports = {
       const helpEmbed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor)
         .setTitle('**Commands**')
-        .setDescription('Hi there! This is a project from **3301#4977** to bring fun to you all in an entertaining and administrative bot. Please feel free to search any commands you do not know with "!help [command]". My prefix is "**!**" and my commands are as follows:');
+        .setDescription('Hi there! This is a project from `3301#4977` to bring fun to you all in an entertaining and administrative bot. My prefix is `ap`, feel free to search any commands you do not know with `ap help [command]`. My commands are as follows:');
 
       for (const command of client.commands) {
         helpEmbed.addField(`**${command[1].name}**`, command[1].description, true);

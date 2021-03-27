@@ -2,7 +2,7 @@ module.exports = {
   name: 'speedtest',
   shortcut: ['test', 'st'],
   description: 'Check the bot\'s internet upload & download speed through speedtest.net',
-  usage: '!speedtest',
+  usage: 'ap speedtest',
   async execute (Discord, message, args, client) {
     const speedtest = require('speedtest-net');
 

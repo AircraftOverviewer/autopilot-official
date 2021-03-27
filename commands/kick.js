@@ -1,7 +1,7 @@
 module.exports = {
   name: 'kick',
   description: '(admin only) Remove a user from the server',
-  usage: '!kick [user]',
+  usage: 'ap kick [user]',
   parameters: {
     1: { name: '[user]', description: '- Tag the user you wish to kick. Cannot be a server moderator' }
   },

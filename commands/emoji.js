@@ -1,7 +1,7 @@
 module.exports = {
   name: 'emoji',
   description: 'Send any emoji within this server, including animated emojis',
-  usage: '!emoji [emoji_name]',
+  usage: 'ap emoji [emoji_name]',
   parameters: {
     1: { name: '[emoji_name]', description: '- The full name of the emoji you wish to send. Does not need to be case-sensitive' }
   },

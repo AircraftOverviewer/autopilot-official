@@ -2,7 +2,7 @@ module.exports = {
   name: 'chat',
   shortcut: ['talk', 'speak', 'c'],
   description: 'Talk to a basic and funny chat AI, and have it respond to you',
-  usage: '!chat [message]',
+  usage: 'ap chat [message]',
   parameters: {
     1: { name: '[message]', description: '- The message that you want the bot to reply to' }
   },
