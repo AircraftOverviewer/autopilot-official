@@ -7,7 +7,7 @@ module.exports = {
     const versionEmbed = new Discord.MessageEmbed()
       .setColor(message.guild.me.displayHexColor)
       .setTitle('Current Version - v2.4.0')
-      .setDescription('```+ Added all Physics commands back to the bot\n+ Fixed prefix errors involving \'!\'\n+ Bug fixes\n**Please feel free to DM any issues to 3301#4977**```');
+      .setDescription('```+ Added \'repo\' command. Type \'ap help repo\' for more information.\n+ Bug fixes```');
     message.channel.send(versionEmbed);
   }
 };
