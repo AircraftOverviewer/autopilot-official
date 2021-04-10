@@ -19,17 +19,7 @@ client.once('ready', () => {
   client.user.setActivity('ap help - Enjoy!', { type: 'LISTENING' });
 });
 
-let counter = 0;
-
 client.on('message', message => {
-
-  if (message.guild.id === '824362037911879690') {
-    if(++counter === 51){
-      client.commands.get('urguyrai').execute(Discord, message);
-      counter = 0;
-    }
-  }
-  
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   if (!message.guild.me.hasPermission('ADMINISTRATOR')) {
     if (message.guild.me.hasPermission('SEND_MESSAGES')) {
