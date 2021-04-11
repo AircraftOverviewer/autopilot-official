@@ -14,7 +14,7 @@ module.exports = {
         { name:  '\u200B', value: `**<:Discord:830460910590099486> - [Discord](${discord})**\nHere is where my community is able to talk and hang out!!` },
         { name: '\u200B', value: '**Thanks for all the support!**\nIt is much appreciated. I hope to see and talk to you all very soon!' }
       )
-      .setImage('https://cdn.discordapp.com/attachments/825194443110875140/830463689068642344/UrGuyRai_Icon_Full.png')
+      .setImage('https://cdn.discordapp.com/attachments/830608865833123860/830608972733087784/UrGuyRai_Icon_Full.png')
       .setTimestamp()
       .setFooter('UrGuyRai\'s Twitch Community')
     message.channel.send(UrGuyRaiEmbed);
