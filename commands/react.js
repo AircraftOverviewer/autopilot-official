@@ -8,10 +8,10 @@ module.exports = {
   async execute (Discord, message, args, client) {
     if (!args[0]) {
       const arg = new Discord.MessageEmbed()
-      .setColor('#ff0000')
-      .setDescription('<:error:784747315960479754> You must include an emoji to react with')
-    message.channel.send(arg)
-    return;
+        .setColor('#ff0000')
+        .setDescription('<:error:784747315960479754> You must include an emoji to react with');
+      message.channel.send(arg);
+      return;
     }
 
     let emoji;
@@ -21,7 +21,7 @@ module.exports = {
 
     const error = new Discord.MessageEmbed()
       .setColor('#ff0000')
-      .setDescription('<:error:784747315960479754> Unable to locate that emoji')
+      .setDescription('<:error:784747315960479754> Unable to locate that emoji');
     if (!emoji) return message.channel.send(error);
 
     const result = await message.channel.messages.fetch({ limit: 2 });
