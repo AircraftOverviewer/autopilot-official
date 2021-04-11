@@ -22,14 +22,12 @@ client.once('ready', () => {
 let counter = 0;
 
 client.on('message', message => {
-
   if (message.guild.id === '824362037911879690' && message.channel.id === '824362038439837767') {
-    if(++counter === 51){
+    if (++counter === 51) {
       client.commands.get('urguyrai').execute(Discord, message, client);
       counter = 0;
     }
   }
-  
   if (!message.content.startsWith(prefix) || message.author.bot) return;
   if (!message.guild.me.hasPermission('ADMINISTRATOR')) {
     if (message.guild.me.hasPermission('SEND_MESSAGES')) {
