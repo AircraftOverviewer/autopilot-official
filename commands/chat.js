@@ -16,11 +16,10 @@ module.exports = {
       message.channel.send(noQuestionEmbed);
     } else {
       message.channel.startTyping();
-      Cleverbot(question)
-        .then(response => {
-          message.channel.stopTyping();
-          message.channel.send(response);
-        });
+      Cleverbot(question).then(response => {
+        message.channel.stopTyping();
+        message.channel.send(response);
+      });
     }
   }
 };
