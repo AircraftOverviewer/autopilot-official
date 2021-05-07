@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "cleverbot-free": "^1.1.4",
+    "cleverbot-free": "^1.1.6",
     "discord.js": "^12.5.1",
     "insult": "0.0.3",
     "iso-639-1": "^2.1.7",

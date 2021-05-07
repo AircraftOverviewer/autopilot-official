@@ -6,20 +6,26 @@ module.exports = {
   parameters: {
     1: { name: '[message]', description: '- The message that you want the bot to reply to' }
   },
-  execute (Discord, message, args, client) {
+  async execute (Discord, message, args) {
     const Cleverbot = require('cleverbot-free');
-    const question = args.join(' ');
-    const noQuestionEmbed = new Discord.MessageEmbed()
-      .setColor('#ff0000')
-      .setDescription('<:error:784747315960479754> You must include something to say');
     if (!args[0]) {
-      message.channel.send(noQuestionEmbed);
-    } else {
-      message.channel.startTyping();
-      Cleverbot(question).then(response => {
-        message.channel.stopTyping();
-        message.channel.send(response);
-      });
+      const noQuestionEmbed = new Discord.MessageEmbed()
+        .setColor('#ff0000')
+        .setDescription('<:error:784747315960479754> You must include something to say');
+
+      return message.channel.send(noQuestionEmbed);
     }
+
+    const input = args.join(' ');
+
+    message.channel.startTyping();
+
+    const response = await Cleverbot(input);
+
+    message.channel.stopTyping();
+    message.channel.send(response);
+    setTimeout(() => {
+      message.channel.stopTyping();
+    }, 10000);
   }
 };
