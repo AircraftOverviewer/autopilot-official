@@ -24,7 +24,7 @@ let counter = 0;
 client.on('message', message => {
   if (message.guild.id === '824362037911879690' && message.channel.id === '824362038439837767') {
     if (++counter === 51) {
-      client.commands.get('urguyrai').execute(Discord, message, client);
+      client.commands.get('urguyrai').execute(Discord, message);
       counter = 0;
     }
   }
@@ -33,7 +33,7 @@ client.on('message', message => {
     if (message.guild.me.hasPermission('SEND_MESSAGES')) {
       const adminEmbed = new Discord.MessageEmbed()
         .setColor('#ff0000')
-        .setDescription('<:error:784747315960479754> This bot requires the administrator permission to have full functionality. Please grant this permission or contact an admin to fix this');
+        .setDescription('<:error:784747315960479754> This bot requires administrator permissions to function properly. Please grant this permission or contact an admin to fix this');
       message.channel.send(adminEmbed);
       return;
     } else {

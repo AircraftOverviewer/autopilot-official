@@ -1,6 +1,6 @@
 module.exports = {
   name: 'urguyrai',
-  execute (Discord, message, client) {
+  execute (Discord, message) {
     if (message.guild.id === '824362037911879690' && message.channel.id === '824362038439837767') {
       const twitch = 'https://www.twitch.tv/urguyrai';
       const youtube = 'https://www.youtube.com/channel/UCcQs6tLozpMNmHKzZ-X05-w';
